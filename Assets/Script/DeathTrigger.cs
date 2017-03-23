@@ -17,12 +17,13 @@ public class DeathTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other){
 
-        if (other.gameObject.CompareTag("Player"))
-        {
+        if (other.gameObject.CompareTag("Player")) {
             // Doesnt seem to work anymore
             //Application.LoadLevel(Application.loadedLevel);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        }
+        else if (other.gameObject.CompareTag("Object")) {
+            Destroy(gameObject);
         }
 
     }
