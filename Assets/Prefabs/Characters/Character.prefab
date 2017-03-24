@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 50489501237374206}
   - component: {fileID: 95058102569139718}
   - component: {fileID: 114532513536646248}
-  - component: {fileID: 70329141321704200}
   - component: {fileID: 58590438618661060}
   m_Layer: 9
   m_Name: Character
@@ -101,8 +100,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1455322746880042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8420781, y: -1.2248406, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 15, z: -10}
+  m_LocalScale: {x: 1, y: -1.13, z: 1}
   m_Children: []
   m_Father: {fileID: 4263412671013876}
   m_RootOrder: 1
@@ -125,8 +124,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 104
-  orthographic: 1
+  field of view: 130.4
+  orthographic: 0
   orthographic size: 14.69
   m_Depth: -1
   m_CullingMask:
@@ -175,20 +174,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.67}
   serializedVersion: 2
   m_Radius: 1.6462445
---- !u!70 &70329141321704200
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1530795938418026}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.3, y: -1.96}
-  m_Size: {x: 2.6139321, y: 0.4168234}
-  m_Direction: 1
 --- !u!81 &81630183560976476
 AudioListener:
   m_ObjectHideFlags: 1
@@ -236,7 +221,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 4728271679242564}
-  jumpHeight: 30
+  jumpHeight: 200
 --- !u!124 &124058672889162240
 Behaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +260,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: f75fd426ccb2c0946a78721c1791f6d8, type: 3}
+  m_Sprite: {fileID: 21300002, guid: f75fd426ccb2c0946a78721c1791f6d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
