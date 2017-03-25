@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4759475422521134}
   - component: {fileID: 212303237987523658}
   - component: {fileID: 61211617338761658}
-  - component: {fileID: 114556565607165356}
   - component: {fileID: 50060194866218698}
   m_Layer: 8
   m_Name: Box
@@ -133,18 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530fb34cbc76a044f91d7dc2941d842e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanvasGroupBox: {fileID: 0}
---- !u!114 &114556565607165356
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616632870764902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15a3a11b7076454cbb1451493b0133b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  CanvasGroupBoulder: {fileID: 0}
 --- !u!212 &212303237987523658
 SpriteRenderer:
   m_ObjectHideFlags: 1

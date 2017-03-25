@@ -23,7 +23,7 @@ public class DeathTrigger : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (other.gameObject.CompareTag("Object")) {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
 
     }
