@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    
     //movement variables
     public float maxSpeed;
 
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public Transform groundCheck;
     public float jumpHeight;
 
+    
     private Rigidbody2D myRB;
     private Animator myAnim;
     private bool facingRight;
@@ -22,10 +24,10 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
-	}
+    }
 
-    // Update is called once per frame
-    void Update() {
+// Update is called once per frame
+void Update() {
         if (grounded && Input.GetAxis("Jump") > 0) {
             grounded = false;
             myAnim.SetBool("isGrounded", false);
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour {
         myAnim.SetFloat("speed", Mathf.Abs(move));
         // wow, why change the velocity??! Because this is sort of arcade game. We'll use the rigid body for jumping and what not
         //the y value of this vecotr2d is not being changed
+
         myRB.velocity = new Vector2(move * maxSpeed, myRB.velocity.y);
 
         if (move > 0 && !facingRight)
@@ -69,5 +72,21 @@ public class PlayerController : MonoBehaviour {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "movingPlatform")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "movingPlatform")
+        {
+            transform.parent = null;
+        }
     }
 }

@@ -81,6 +81,8 @@
     <Compile Include="Assets\Script\ScrollingBackground.cs" />
     <Compile Include="Assets\Script\SliderText.cs" />
     <Compile Include="Assets\Script\UiTrigger.cs" />
+    <Compile Include="Assets\Script\bridgeController.cs" />
+    <Compile Include="Assets\Script\wheelRotator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
