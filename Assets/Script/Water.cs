@@ -28,9 +28,9 @@ public class Water : MonoBehaviour {
 
     //All our constants
     const float springconstant = 0.02f;
-    const float damping = 0.04f;
+    const float damping = 0.04f; 
     const float spread = 0.05f;
-    const float z = -1f;
+    const float z = 0f;
 
     //The properties of our water
     float baseheight;
@@ -41,7 +41,7 @@ public class Water : MonoBehaviour {
     void Start()
     {
         //Spawning our water
-        SpawnWater(-10,10,1,-3);
+        SpawnWater(-480,120,-40,-72);
     }
 
     
@@ -172,11 +172,7 @@ public class Water : MonoBehaviour {
             colliders[i].GetComponent<BoxCollider2D>().isTrigger = true;
             colliders[i].AddComponent<WaterDetector>();
 
-        }
-
-        
-        
-        
+        } 
     }
 
     //Same as the code from in the meshes before, set the new mesh positions
@@ -242,12 +238,5 @@ public class Water : MonoBehaviour {
         //Finally we update the meshes to reflect this
         UpdateMeshes();
 	}
-
-    void OnTriggerStay2D(Collider2D Hit)
-    {
-        //Bonus exercise. Fill in your code here for making things float in your water.
-        //You might want to even include a buoyancy constant unique to each object!
-    }
-
 
 }
