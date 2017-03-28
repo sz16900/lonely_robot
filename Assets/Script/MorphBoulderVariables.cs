@@ -26,8 +26,8 @@ public class MorphBoulderVariables : MonoBehaviour {
 	void Update() {
 		transform.Rotate (0, 0, rotateSpeed * 2 * Time.deltaTime);
 		transform.localScale = new Vector2(scaleX, scaleY);
-		Rigidbody2D crate = GetComponent<Rigidbody2D>();
-		crate.gravityScale = objGravity;
+		Rigidbody2D boulder = GetComponent<Rigidbody2D>();
+		boulder.gravityScale = objGravity;
 	}
 
 	public void AdjustRotateSpeed (float newSpeed) {

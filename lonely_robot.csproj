@@ -75,12 +75,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Clickspawn.cs" />
+    <Compile Include="Assets\Script\CloudController.cs" />
     <Compile Include="Assets\Script\DeathTrigger.cs" />
     <Compile Include="Assets\Script\MorphBoulderVariables.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\ScrollingBackground.cs" />
     <Compile Include="Assets\Script\SliderText.cs" />
     <Compile Include="Assets\Script\UiTrigger.cs" />
+    <Compile Include="Assets\Script\Water.cs" />
+    <Compile Include="Assets\Script\WaterDetector.cs" />
     <Compile Include="Assets\Script\bridgeController.cs" />
     <Compile Include="Assets\Script\wheelRotator.cs" />
   </ItemGroup>
