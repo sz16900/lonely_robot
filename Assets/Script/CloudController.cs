@@ -52,15 +52,9 @@ public class CloudController : MonoBehaviour
         // destroy or move
         for (int i = 0; i < sky.Count; i++)
         {
-            if (!GeometryUtility.TestPlanesAABB(planes, sky[i].cloudObject.GetComponent<Collider2D>().bounds))
-            {
-                Destroy(sky[i].cloudObject);
-                sky.Remove(sky[i]);
-            }
-            else
-            {
-                sky[i].cloudObject.transform.position += sky[i].velocity;
-            }
+          // keep x ammounts of clouds in the k, dont destroy them, but keep them moving 
+          sky[i].cloudObject.transform.position += sky[i].velocity;
+                
         }
     }
 
@@ -69,7 +63,7 @@ public class CloudController : MonoBehaviour
         // new cloud, starting position, vector, and alpha
         float range = Random.Range(rangeMin, rangeMax);
         GameObject newCloud = clouds[Random.Range(0, clouds.Length)];
-        Vector3 startPosition = cam.ViewportToWorldPoint(new Vector3(0f, range, -cam.transform.position.z));
+        Vector3 startPosition = cam.ViewportToWorldPoint(new Vector3(0f, range, 15f));
         // x: changed pivot point of cloud Assets (imported pictures) to Right, that way when one is place the placement point is the extreme right of the cloud, adjust box colliders to match
         // y: random between min max (Viewport is 0-1, so it'll be placed accordingly)
         // z: since camera is offset from plane of action
