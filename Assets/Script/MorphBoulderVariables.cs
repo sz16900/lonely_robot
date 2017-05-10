@@ -12,14 +12,22 @@ public class MorphBoulderVariables : MonoBehaviour {
     private float scaleY;
     // Controls the gravity of the boulder
     private float objGravity = 1f;
+    // If you add another boulder, make sure you also add it here
+    private Vector2 Boulder1Pos;
+    private Vector2 Boulder2Pos;
+    private Vector2 Boulder3Pos;
 
-	void Start() {
+    void Start() {
         // Sets the initial size of the boulder object to the variables set in the Inspector.
         // Without this the boulder sprite will not be visible, or if set to 1 the sprite
         // will be set to the original sprite size e.g very large!
         Transform boulderTransform = GetComponent<Transform>();
         scaleX = boulderTransform.localScale.x;
         scaleY = transform.localScale.y;
+
+        Boulder1Pos = GameObject.Find("Boulder1").transform.position;
+        Boulder2Pos = GameObject.Find("Boulder2").transform.position;
+        Boulder3Pos = GameObject.Find("Boulder3").transform.position;
 
     }
 
@@ -45,4 +53,35 @@ public class MorphBoulderVariables : MonoBehaviour {
 	public void AdjustObjGravity (float newObjGravity) {
 		objGravity = newObjGravity;
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DeathTrigger"))
+        {
+            if (gameObject.name == "Boulder1")
+            {
+                Transform boulderTransform = GetComponent<Transform>();
+                transform.position = new Vector2(Boulder1Pos[0], Boulder1Pos[1]);
+                resetParameters();
+            }
+            if (gameObject.name == "Boulder2")
+            {
+                Transform boulderTransform = GetComponent<Transform>();
+                transform.position = new Vector2(Boulder2Pos[0], Boulder2Pos[1]);
+                resetParameters();
+            }
+            if (gameObject.name == "Boulder3")
+            {
+                Transform boulderTransform = GetComponent<Transform>();
+                transform.position = new Vector2(Boulder3Pos[0], Boulder3Pos[1]);
+                resetParameters();
+
+            }
+        }
+    }
+
+    void resetParameters() {
+        AdjustObjGravity(1f);
+        AdjustRotateSpeed(0f);
+    }
 }

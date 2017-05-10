@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wheelRotator : MonoBehaviour {
+public class FerrisController : MonoBehaviour
+{
 
     public float rotationSpeed;
 
@@ -11,4 +12,10 @@ public class wheelRotator : MonoBehaviour {
     {
         transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotationSpeed);
     }
+
+    public void AdjustSpeed(float newSpeed)
+    {
+        rotationSpeed = newSpeed;
+    }
+
 }

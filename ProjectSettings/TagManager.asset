@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object
   - movingPlatform
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX
