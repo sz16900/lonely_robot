@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object
   - movingPlatform
+  - ferrisProximity
   layers:
   - Default
   - TransparentFX

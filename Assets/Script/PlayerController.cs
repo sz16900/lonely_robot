@@ -15,25 +15,62 @@ public class PlayerController : MonoBehaviour {
     public Transform groundCheck;
     public float jumpHeight;
 
-    
+	public static float wheelVar;// important
+	public static float drumVar;// important
+	public static float platformVar;// important
+
+	private CsoundUnity csound;
+	[HideInInspector] public bool jump = true;  
     private Rigidbody2D myRB;
     private Animator myAnim;
     private bool facingRight;
-
+	public float takeOffHeight = 0;
 	// Use this for initialization
 	void Start () {
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
+		csound = GetComponent<CsoundUnity> ();
+		wheelVar = 0;
+		drumVar = 0;
+		platformVar = 0;
     }
 
 // Update is called once per frame
 void Update() {
+		csound.setChannel ("absoluteHeightSlider", this.transform.position.y);
+		csound.setChannel ("wheelSlider", wheelVar);
+		csound.setChannel ("AfterDemoSlider", drumVar);
+		csound.setChannel ("PlatformSlider", platformVar);
+		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
         if (grounded && Input.GetAxis("Jump") > 0) {
-            grounded = false;
+		//if(Input.GetButtonDown("Jump") && grounded){
+		 
+		    grounded = false;
             myAnim.SetBool("isGrounded", false);
             //dont change x axis, only y (because of jumping)
             myRB.AddForce(new Vector2(0, jumpHeight));
+			takeOffHeight = this.transform.position.y;
+			csound.setChannel ("heightSlider", this.transform.position.y);
+
+			print ("----------------------------------------------JUMP");
         }
+		//if(Input.GetButtonDown("Jump") && grounded){
+	//		jump = true;
+			////float jumpheight = this.transform.position.y;
+			////csound.setChannel ("jumpSlider", this.transform.position.y);
+			//takeOffHeight = this.transform.position.y;
+			//print ("JUMP");
+			//csound.setChannel ("heightSlider", this.transform.position.y);
+
+//		}
+		if (!grounded) {
+			csound.setChannel ("relativeHeightSlider", this.transform.position.y - takeOffHeight);
+			print ("relative thing" + (this.transform.position.y - takeOffHeight));
+		} 
+		if (grounded) {
+			csound.setChannel ("relativeHeightSlider", 0);
+		} 
     }
 
 
@@ -76,10 +113,16 @@ void Update() {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+		print ("Printting collision" + collision.transform.tag);
         if (collision.transform.tag == "movingPlatform")
         {
             transform.parent = collision.transform;
         }
+		if (collision.transform.tag == "ferrisProximity")
+		{
+			csound.setChannel ("wheelSlider", 1);
+			print ("in ferris proximity");
+		}
     }
 
     void OnCollisionExit2D(Collision2D collision)

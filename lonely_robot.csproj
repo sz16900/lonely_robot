@@ -75,6 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Prefabs\Player\LeftFootController.cs" />
+    <Compile Include="Assets\Prefabs\Player\RightFootController.cs" />
     <Compile Include="Assets\Script\Clickspawn.cs" />
     <Compile Include="Assets\Script\CloudController.cs" />
     <Compile Include="Assets\Script\DeathTrigger.cs" />
@@ -90,6 +92,23 @@
     <Compile Include="Assets\Script\quitOnClick.cs" />
     <Compile Include="Assets\Script\selectOnInput.cs" />
     <Compile Include="Assets\Script\wheelRotator.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CheckForCsound.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundCsharp.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundUnity.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundUnityBridge.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\SendToStreamingAssets.cs" />
+    <Compile Include="Assets\Scripts\Scene1\DemoArea.cs" />
+    <Compile Include="Assets\Scripts\Scene1\MyPlatformController.cs" />
+    <Compile Include="Assets\Scripts\Scene1\MyPlayerController.cs" />
+    <Compile Include="Assets\Scripts\Scene1\PlatformArea.cs" />
+    <Compile Include="Assets\Scripts\Scene1\SmoothFollow.cs" />
+    <Compile Include="Assets\Scripts\Scene1\SphereController.cs" />
+    <Compile Include="Assets\Scripts\Scene1\ferrisProx.cs" />
+    <Compile Include="Assets\Scripts\Scene2\ColumnController.cs" />
+    <Compile Include="Assets\Scripts\Scene2\PlayerController2.cs" />
+    <Compile Include="Assets\Scripts\Scene2\WallController.cs" />
+    <Compile Include="Assets\Scripts\Scene3\PlayerController3.cs" />
+    <Compile Include="Assets\Scripts\Scene3\WallController2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
