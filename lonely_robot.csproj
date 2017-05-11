@@ -88,9 +88,14 @@
     <Compile Include="Assets\Script\Water.cs" />
     <Compile Include="Assets\Script\WaterDetector.cs" />
     <Compile Include="Assets\Script\bridgeController.cs" />
+    <Compile Include="Assets\Script\gameWin.cs" />
     <Compile Include="Assets\Script\loadSceneOnClick.cs" />
+    <Compile Include="Assets\Script\pauseGame.cs" />
     <Compile Include="Assets\Script\quitOnClick.cs" />
+    <Compile Include="Assets\Script\restartFromBeginning.cs" />
+    <Compile Include="Assets\Script\saveGame.cs" />
     <Compile Include="Assets\Script\selectOnInput.cs" />
+    <Compile Include="Assets\Script\timer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/game_menu.unity
+- path: Assets/lonely_robot.unity
   isLoaded: 1
   isActive: 1
