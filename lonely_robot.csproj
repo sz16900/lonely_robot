@@ -93,6 +93,7 @@
     <Compile Include="Assets\Script\gameWin.cs" />
     <Compile Include="Assets\Script\loadSceneOnClick.cs" />
     <Compile Include="Assets\Script\moveBall.cs" />
+    <Compile Include="Assets\Script\moveBoard.cs" />
     <Compile Include="Assets\Script\pauseGame.cs" />
     <Compile Include="Assets\Script\quitOnClick.cs" />
     <Compile Include="Assets\Script\restartFromBeginning.cs" />
