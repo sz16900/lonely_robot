@@ -9,10 +9,11 @@ public class restartFromBeginning : MonoBehaviour {
 
     void Awake()
     {
-     // Player.position = new Vector3(-698, -49, 0);
-	  Player.position = new Vector3(-161, -11, 0);
+		//Player.position = new Vector3(-723, -42, 0);
+		Player.position = new Vector3(330, 12, 0);
 
         Player.eulerAngles = new Vector3(0, PlayerPrefs.GetFloat("Cam_y"), 0);
+
 
 
     }
@@ -21,6 +22,7 @@ public class restartFromBeginning : MonoBehaviour {
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
 }

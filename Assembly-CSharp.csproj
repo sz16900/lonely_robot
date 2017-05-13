@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{868BEE9A-3D3B-1EB8-C1B5-A0C68B44549C}</ProjectGuid>
+    <ProjectGuid>{FBB1759D-4593-BEEA-5841-1259C1EA5CA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,6 +64,7 @@
      <Compile Include="Assets\Script\gameWin.cs" />
      <Compile Include="Assets\Script\loadSceneOnClick.cs" />
      <Compile Include="Assets\Script\moveBall.cs" />
+     <Compile Include="Assets\Script\moveBoard.cs" />
      <Compile Include="Assets\Script\pauseGame.cs" />
      <Compile Include="Assets\Script\quitOnClick.cs" />
      <Compile Include="Assets\Script\restartFromBeginning.cs" />
@@ -71,6 +72,11 @@
      <Compile Include="Assets\Script\saveGame.cs" />
      <Compile Include="Assets\Script\selectOnInput.cs" />
      <Compile Include="Assets\Script\timer.cs" />
+     <Compile Include="Assets\Scripts\CsoundUnityScripts\CheckForCsound.cs" />
+     <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundCsharp.cs" />
+     <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundUnity.cs" />
+     <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundUnityBridge.cs" />
+     <Compile Include="Assets\Scripts\CsoundUnityScripts\SendToStreamingAssets.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

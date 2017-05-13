@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class saveGame : MonoBehaviour {
     public Transform Player;
     public Transform canvas;
+	public Transform mainCanvas;
 
     void Awake()
     {
@@ -15,8 +16,7 @@ public class saveGame : MonoBehaviour {
                   PlayerPrefs.GetFloat("z")
                   );
         Player.eulerAngles = new Vector3(0, PlayerPrefs.GetFloat("Cam_y"),0);
-   
-
+		mainCanvas.gameObject.SetActive (true);
     }
 
     public void saveGameSettings(bool Quit)
