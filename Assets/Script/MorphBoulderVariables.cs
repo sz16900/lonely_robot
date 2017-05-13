@@ -19,6 +19,13 @@ public class MorphBoulderVariables : MonoBehaviour {
     private Vector2 Boulder4Pos;
     private Vector2 BoulderBasketballPos;
 
+
+    private Vector2 BoulderTower;
+
+    private Vector2 BoulderLiftBasket;
+
+
+
     void Start() {
         // Sets the initial size of the boulder object to the variables set in the Inspector.
         // Without this the boulder sprite will not be visible, or if set to 1 the sprite
@@ -31,7 +38,9 @@ public class MorphBoulderVariables : MonoBehaviour {
         Boulder2Pos = GameObject.Find("Boulder2").transform.position;
         Boulder3Pos = GameObject.Find("Boulder3").transform.position;
         Boulder4Pos = GameObject.Find("Boulder4").transform.position;
-        BoulderBasketballPos = GameObject.Find("BoulderBasketballPos").transform.position;
+        BoulderTower = GameObject.Find("BoulderTower").transform.position;
+        BoulderLiftBasket = GameObject.Find("BoulderLiftBasket").transform.position;
+        BoulderBasketballPos = GameObject.Find("BoulderBasketball").transform.position;
     }
 
 	void Update() {

@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Ferris.cs" />
+    <Compile Include="Assets\Prefabs\Player\LeftFootController.cs" />
+    <Compile Include="Assets\Prefabs\Player\RightFootController.cs" />
     <Compile Include="Assets\Script\Ball.cs" />
     <Compile Include="Assets\Script\Clickspawn.cs" />
     <Compile Include="Assets\Script\CloudController.cs" />
@@ -101,6 +103,11 @@
     <Compile Include="Assets\Script\saveGame.cs" />
     <Compile Include="Assets\Script\selectOnInput.cs" />
     <Compile Include="Assets\Script\timer.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CheckForCsound.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundCsharp.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundUnity.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundUnityBridge.cs" />
+    <Compile Include="Assets\Scripts\CsoundUnityScripts\SendToStreamingAssets.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

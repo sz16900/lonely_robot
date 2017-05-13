@@ -6,14 +6,14 @@ form caption("Write FFT data to table and create simple EQ"), size(300, 200)
 -n -d -m0d
 ;-odac
 </CsOptions>
-<CsInstruments>  
+<CsInstruments>
 sr 	= 	48000 
 ksmps 	= 	32
 nchnls 	= 	2
 0dbfs	=	1 
 
 ;FFT table
-giampFFT  ftgen 1001,0,1024,2,0 
+giampFFT  ftgen 1001,0,1024,2,0
 
 ;instrument writes FFT table to a table, it writes 1024 bands, but we
 ;only access the lower bands in Unity. 

@@ -15,7 +15,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 using UnityEngine;
 using System.IO;
-using UnityEditor;
+using UnityEditor;//no if here
 using UnityEditor.SceneManagement;
 using System.Collections.Generic;
 
