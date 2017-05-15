@@ -47,13 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Ferris.cs" />
+     <Compile Include="Assets\Prefabs\Player\LeftFootController.cs" />
+     <Compile Include="Assets\Prefabs\Player\RightFootController.cs" />
      <Compile Include="Assets\Script\Ball.cs" />
      <Compile Include="Assets\Script\Clickspawn.cs" />
      <Compile Include="Assets\Script\CloudController.cs" />
      <Compile Include="Assets\Script\DeathTrigger.cs" />
+     <Compile Include="Assets\Script\DemoArea.cs" />
      <Compile Include="Assets\Script\FerrisController.cs" />
      <Compile Include="Assets\Script\MorphBoulderVariables.cs" />
      <Compile Include="Assets\Script\Movement.cs" />
+     <Compile Include="Assets\Script\PlatformArea.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
      <Compile Include="Assets\Script\ScrollingBackground.cs" />
      <Compile Include="Assets\Script\SliderText.cs" />
@@ -61,16 +65,21 @@
      <Compile Include="Assets\Script\Water.cs" />
      <Compile Include="Assets\Script\WaterDetector.cs" />
      <Compile Include="Assets\Script\bridgeController.cs" />
+     <Compile Include="Assets\Script\christmassProx.cs" />
+     <Compile Include="Assets\Script\endProx.cs" />
+     <Compile Include="Assets\Script\ferrisProx.cs" />
      <Compile Include="Assets\Script\gameWin.cs" />
      <Compile Include="Assets\Script\loadSceneOnClick.cs" />
      <Compile Include="Assets\Script\moveBall.cs" />
      <Compile Include="Assets\Script\moveBoard.cs" />
      <Compile Include="Assets\Script\pauseGame.cs" />
+     <Compile Include="Assets\Script\pinballProx.cs" />
      <Compile Include="Assets\Script\quitOnClick.cs" />
      <Compile Include="Assets\Script\restartFromBeginning.cs" />
      <Compile Include="Assets\Script\ropeBreaker.cs" />
      <Compile Include="Assets\Script\saveGame.cs" />
      <Compile Include="Assets\Script\selectOnInput.cs" />
+     <Compile Include="Assets\Script\skateboardProx.cs" />
      <Compile Include="Assets\Script\timer.cs" />
      <Compile Include="Assets\Scripts\CsoundUnityScripts\CheckForCsound.cs" />
      <Compile Include="Assets\Scripts\CsoundUnityScripts\CsoundCsharp.cs" />

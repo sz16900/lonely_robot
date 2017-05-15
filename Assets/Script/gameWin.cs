@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class gameWin : MonoBehaviour {
 
+	public Collider2D win;
+
 private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

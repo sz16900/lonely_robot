@@ -1,8 +1,16 @@
-﻿<Properties StartupItem="lonely_robot.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\timer.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/gameWin.cs">
     <Files>
-      <File FileName="Assets\Script\timer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ferrisProx.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="37" Column="41" />
+      <File FileName="Assets/Script/christmassProx.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/skateboardProx.cs" Line="1" Column="1" />
+      <File FileName="../../gitStuff/lonely_robot/Assets/Script/endProx.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/restartFromBeginning.cs" Line="13" Column="3" />
+      <File FileName="Assets/Script/ropeBreaker.cs" Line="24" Column="2" />
+      <File FileName="Assets/Script/gameWin.cs" Line="8" Column="1" />
+      <File FileName="Assets/Script/timer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
