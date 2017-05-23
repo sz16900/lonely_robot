@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls quit menu button.
 public class quitOnClick : MonoBehaviour {
     public void Quit()
     {

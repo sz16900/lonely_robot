@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Main menu controller.
 public class selectOnInput : MonoBehaviour {
     public EventSystem eventSystem;
     public GameObject selectedObject;
@@ -15,16 +16,13 @@ public class selectOnInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetAxisRaw ("Vertical") != 0 && buttonSelected == false)
-        {
+        if(Input.GetAxisRaw ("Vertical") != 0 && buttonSelected == false) {
             eventSystem.SetSelectedGameObject(selectedObject);
             buttonSelected = true;
-        }
-		
+        }	
    
 	}
-    private void onDisable()
-    {
+    private void onDisable() {
         buttonSelected = false;
     }
 }

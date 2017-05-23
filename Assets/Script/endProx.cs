@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// Music at the end of the level.
 public class endProx : MonoBehaviour {
 
 

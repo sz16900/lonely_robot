@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// Changes the music when player enters the christmas lights bridge.
 public class christmassProx : MonoBehaviour {
 
 

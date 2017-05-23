@@ -2,23 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Cloud
-{
+public class Cloud {
 
     public GameObject cloudObject;
     public Vector3 velocity;
     public float alpha;
 
-    public Cloud(GameObject newCloudObject, Vector3 newVelocity)
-    {
+    public Cloud(GameObject newCloudObject, Vector3 newVelocity) {
         cloudObject = newCloudObject;
         velocity = newVelocity;
     }
 
 }
 
-public class CloudController : MonoBehaviour
-{
+public class CloudController : MonoBehaviour {
 
     public GameObject[] clouds;
     public List<Cloud> sky = new List<Cloud>();
@@ -35,31 +32,26 @@ public class CloudController : MonoBehaviour
     private Plane[] planes;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         cam = Camera.main;
         planes = GeometryUtility.CalculateFrustumPlanes(cam);
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         // spawn a cloud maybe?
-        if (sky.Count < skyMax && Random.Range(0, 100) <= spawnPercent)
-        {
+        if (sky.Count < skyMax && Random.Range(0, 100) <= spawnPercent) {
             SpawnCloud();
         }
         // destroy or move
-        for (int i = 0; i < sky.Count; i++)
-        {
+        for (int i = 0; i < sky.Count; i++) {
           // keep x ammounts of clouds in the k, dont destroy them, but keep them moving 
           sky[i].cloudObject.transform.position += sky[i].velocity;
                 
         }
     }
 
-    private void SpawnCloud()
-    {
+    private void SpawnCloud() {
         // new cloud, starting position, vector, and alpha
         float range = Random.Range(rangeMin, rangeMax);
         GameObject newCloud = clouds[Random.Range(0, clouds.Length)];
@@ -71,8 +63,9 @@ public class CloudController : MonoBehaviour
         GameObject spawnCloudObject = (GameObject)Instantiate(newCloud, startPosition, Quaternion.identity);
         spawnCloudObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, range);
         spawnCloudObject.transform.localScale = new Vector3(range, range, range);
-        if (range >= .7)
+        if (range >= .7) {
             spawnCloudObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        }
         // add to sky
         sky.Add(new Cloud(spawnCloudObject, new Vector3(baseVelocity.x * range, 0, 0)));
     }

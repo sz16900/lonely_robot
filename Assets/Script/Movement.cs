@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Test script for moving basket ball.
 public class Movement : MonoBehaviour {
 
 	private bool drag;					// True if is being dragged

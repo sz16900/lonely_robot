@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls skateboard object.
 public class moveBoard : MonoBehaviour {
 	private float force = 0f;
 
@@ -14,8 +15,7 @@ public class moveBoard : MonoBehaviour {
 
     }
 
-	public void AdjustSpeed(float newForce)
-	{
+	public void AdjustSpeed(float newForce)	{
         force = newForce;
     }
 

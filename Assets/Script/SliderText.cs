@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+// Changes UI slider text.
 public class SliderText : MonoBehaviour {
 
     // The value displayed next to the slider

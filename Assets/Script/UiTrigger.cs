@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Controls showing the UI when player collides with a editable object.
 public class UiTrigger : MonoBehaviour {
 
     // The UI for the Boulder controls are wrapped up in a Canvas Group

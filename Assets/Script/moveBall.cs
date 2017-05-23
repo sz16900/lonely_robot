@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls ball object.
 public class moveBall : MonoBehaviour {
 	private float rotationSpeed = 0f;
 	private float objGravity = 1f;
@@ -15,8 +16,7 @@ public class moveBall : MonoBehaviour {
 		boulder.gravityScale = objGravity;
 	}
 
-	public void AdjustSpeed(float newSpeed)
-	{
+	public void AdjustSpeed(float newSpeed) {
 		rotationSpeed = newSpeed;
 	}
 

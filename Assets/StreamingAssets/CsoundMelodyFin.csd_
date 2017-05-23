@@ -1,11 +1,6 @@
-
-
-;newer not working
 <Cabbage>
 form caption("CsoundMelody2"),
 hslider channel("relativeHeightSlider"), text("Relative Height"), range(0, 9, 0)
-;hslider channe2("absoluteHeightSlider"), text("Absolute Hight"),
-;range(0, 9, 0)
 hslider channel2("wheelSlider"), text("Wheel Proximity"),
 range(0, 1, 0)
 hslider channel3("AfterDemoSlider"), text("After Demo"),
@@ -120,19 +115,16 @@ endin
 instr PLAYER_MOVE
       krnd randh 1, 10, 10 
 	kHeight  chnget "relativeHeightSlider"
- ;printks "gkPitch (%d)  kheight: %d\n", 0.25, gkPitch0, kHeight
-      if kHeight<=0.5 then		;-15 
+      if kHeight<=0.5 then		
          gkPitch0 = 0			
-      elseif  kHeight >0.5 && kHeight<=1 then		;-13 
+      elseif  kHeight >0.5 && kHeight<=1 then		 
          gkPitch0 = 7			
-      elseif kHeight >1 && kHeight<=1.5 then    ;-11
+      elseif kHeight >1 && kHeight<=1.5 then    
 	    gkPitch0 = 12
-      elseif kHeight >1.5 then    ;-9
+      elseif kHeight >1.5 then    
 	    gkPitch0 = 24
  	endif
-      ;printks "gkPitch (%d) \n", 0.25, gkPitch0
       
-
       iAbsHeight chnget "absoluteHeightSlider"
      if iAbsHeight>-11 then		;-15
          gkEnv = 1
@@ -170,18 +162,18 @@ instr PLAYER_MOVE
          gkPlatform = 0.09
  	endif  	
      iChristmassLights chnget "CristmasLightsSlider";
-     if  iChristmassLights= 0 then		;-15 iChristmassLights= 0 &&
+     if  iChristmassLights= 0 then		
          gkChristmass = 0	
          	
           printks "0- KRANDOM %f CHRISTMAS %f\n", 0.1, krnd, gkChristmass
 
-      elseif  iChristmassLights >0 &&  krnd < 0 then   ;iChristmassLights >0 &&
+      elseif  iChristmassLights >0 &&  krnd < 0 then   
 
 
          gkChristmass = 0.05
          gkNotWheel = 0
                 printks "0+ KRANDOM %f CHRISTMAS %f\n", 0.1, krnd, gkChristmass
-      elseif  iChristmassLights >0 &&  krnd >= 0 then   ;iChristmassLights >0 &&
+      elseif  iChristmassLights >0 &&  krnd >= 0 then   
 
 
          gkChristmass = 0
@@ -192,18 +184,13 @@ instr PLAYER_MOVE
       if iSkateboard= 0 then		;-15 
          gkHiHat = 0
          gkKickVol2	= 0	
-         ;gkKickVol = 0.40
-         ;gkNotWheel = 0.05		
       elseif   iSkateboard >0 && krnd < 0 then    
          gkHiHat = 0.005
          gkKickVol2 = 0.2	
-         ;gkNotWheel = 0
          gkKickVol = 0
       elseif   iSkateboard >0 && krnd >= 0 then    
          gkHiHat = 0
          gkKickVol2	= 0.2	
-         ;gkKickVol = 0.40
-         ;gkNotWheel = 0.05	
          gkKickVol = 0        
  	endif  	
        iAfterDemo  chnget "AfterDemoSlider"
@@ -218,24 +205,7 @@ instr PLAYER_MOVE
  	  gkKickVol2 =0
  	  
  	 endif 
- 	;iBBall = 0;chnget "BasketballSlider"
- 	;if iBBall= 0 || krnd > 0 then		;-15 
-       ;  gkBBall	= 0
-         ;gkNotWheel = 0.1	
-     ;elseif  iBBall >0 && krnd <= 0 then     
-      ;   gkBBall = 0.05
-       ;  gkNotWheel = 0
- 	;endif   	
- 
- 
- 
- 
- 	;iBBallKicks = 0;chnget "BasketballSlider"
- 	;if iBBallKicks= 0 then		;-15 
-       ; gkKickVol2	= 0	
-      ;elseif  iBBallKicks >0 then     
-       ; gkKickVol2 = 0.2
- 	;endif   	
+   	
  	     
      
 endin
@@ -362,13 +332,7 @@ endin
 <CsScore>
 f1 0 65536 10 1
 
-;f1 	0 	256 	10 	1 	;  a sine wave function table
 
-
-;f3 0 1024 5 0.1 20  1 100 0.001 	;  a sine wave function table
- ;f4 0 1024 9 1 1  1 10   1 	;  a sine wave function table
- ;f5 0 1024 9 01 5 1 500 0.001 	;  a sine wave function table
-;f6 0 1024 5 0.1 20 1 100 0.001 	;  a sine wave function table
 f7 0 1024 5 0.1 20 1 100 0.001 	;  a sine wave function table
 
 
@@ -379,44 +343,8 @@ f7 0 1024 5 0.1 20 1 100 0.001 	;  a sine wave function table
  f14 0 1024 6 1 100 100 100 0.001 	;  frantic sine 
  f3 0 1024 10 1;kick
  f6 0 1024 10 1; kick fast 
-;f1 0 16384 10 1 0   0.3 0    0.2 0     0.14 0     .111   ;sq
 
-;f2 0 16384 10 1 0   0.3 0    0.2 0     0.14 0     .111   ;sq
-;f3 0 16384 10 1 0   0.3 0    0.2 0     0.14 0     .111   ;sq
-;f4 0 16384 10 1 0   0.1 0    0.5 0     0.14 0     .111   ;sq circus
-;f5 0 16384 10 1 0   0.3 0    0.2 0     0.14 0     .111   ;sq
-;f6 0 16384 10 1 0   0.3 0    0.2 0     0.14 0     .111   ;sq
-
-;f2 0 16384 10 1 1   1   1    0.7 0.5   0.3  0.1
-;f3 0 16384 10 1 1   1   1    0.7 0.5   0.3  0.1
-;f5 0 16384 10 1 1   1   1    0.7 0.5   0.3  0.1
-;f6 0 16384 10 1 1   1   1    0.7 0.5   0.3  0.1
-;f7 0 16384 10 1 1   1   1    0.7 0.5   0.3  0.1
-
-;f2 2 0 3 -2 1 0 -1
-;f3 2 0 3 -2 1 0 -1
-;f4 2 0 3 -2 1 0 -1
-;f5 2 0 3 -2 1 0 -1
-;f6 2 0 3 -2 1 0 -1
-
-;f3 0 1024 5 0.1 20 1 100 0.001 
-;f4 0 1024 5 0.1 20 1 100 0.001
-;f4  0 16384 10 1
-;f5 0 1024 5 0.1 20 1 100 0.001
-;f7 0 1024 5 0.1 20 1 100 0.001
- 
-
-;f6 0 1024 10 1 
-
-;i"PLAYER_MOVE" 0 [3600*12]
-r 200 CNT
-
-
-
-
-
-
-
+r 100 CNT
 
 i20   0         0.1        0.2
 i20   0.125         0.1        0.2
@@ -482,12 +410,6 @@ i20   7.75         0.1        0.2
 i20   7.875         0.1        0.2
 
 
-
-
-;i 1 0  5 1
-
-
-;i4 0  1    0.02 	1 
 
 i"PLAYER_MOVE" 0 0.25
 i"PLAYER_MOVE" 0.25 0.25
@@ -990,188 +912,6 @@ s
 
 </CsScore>
 </CsoundSynthesizer>
-
-
-
-
-r 8 CNT
-i2  [0.00 + 0.0 * $CNT.]  .25    0 	8.06  
-i2  [0.50 + 0.0 * $CNT.]   . 	. 	8.08 
-i2  [1.00 + 0.0 * $CNT.]   . 	. 	8.03
-i2  [1.50 + 0.0 * $CNT.]   . 	. 	8.01
-i2  [2.00 + 0.0 * $CNT.]   . 	. 	8.13 
-i2  [2.25 + 0.0 * $CNT.]   . 	. 	8.10
-i2  [2.50 + 0.0 * $CNT.]   . 	. 	8.08
-i2  [2.75 + 0.0 * $CNT.]   . 	. 	8.06
-i2  [3.25 + 0.0 * $CNT.]   . 	. 	8.06
-i2  [3.50 + 0.0 * $CNT.]   . 	. 	8.06
-i2  [3.75 + 0.0 * $CNT.]   . 	. 	8.06
-
-
-i1  [0.00 + 0.0 * $CNT.]   .25    0 	7.01 
-i1  [0.25 + 0.0 * $CNT.]    .    . 	6.06;;;;;;;
-i1  [0.50 + 0.0 * $CNT.]    .    . 	7.03
-i1  [1.00 + 0.0 * $CNT.]    .    . 	7.06
-i1  [1.50 + 0.0 * $CNT.]    .    .     7.08 
-i1  [2.00 + 0.0 * $CNT.]    .    .     7.10
-i1  [2.25 + 0.0 * $CNT.]    .    .     7.08
-i1  [2.50 + 0.0 * $CNT.]    .    .     7.06
-i1  [2.75 + 0.0 * $CNT.]    .    .     7.10
-i1  [3.25 + 0.0 * $CNT.]    .    .     7.06
-i1  [3.50 + 0.0 * $CNT.]    .    .     6.15
-i1  [3.75 + 0.0 * $CNT.]    .    .     6.18
-s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-;basketball melody
-i8  0           0.05    0 	8.10
-;i8  0.0625      0.05    0 	8.08
-;i8  0.125       0.05    0 	8.06
-;i8  0.1875      0.05    0 	8.03
-i8  0.25        0.05    0 	8.01
-;i8  0.3125      0.05    0 	8.10
-i8  0.375       0.05    0 	8.08
-;i8  0.4375      0.05    0 	8.06
-i8  0.5         0.05    0 	8.12
-;i8  0.5625      0.05    0 	8.13
-i8  0.625       0.05    0 	8.10
-;i8  0.6875      0.05    0 	8.12
-i8  0.75        0.05    0 	8.13
-;i8  0.8125      0.05    0 	8.15
-i8  0.875       0.05    0 	8.13
-i8  0.9375      0.05    0 	8.12
-
-;i8  1           0.02    0 	8.13
-;i8  1.0625      0.02    0 	8.12
-i8  1.125       0.02    0 	8.10
-i8  1.1875      0.02    0 	8.13
-;i8  1.25        0.02    0 	8.12
-i8  1.3125      0.02    0 	8.10
-;i8  1.375       0.02    0 	8.08
-;i8  1.4375      0.02    0 	8.06
-i8  1.5         0.02    0 	8.12
-i8  1.5625      0.02    0 	8.13
-i8  1.625       0.02    0 	8.10
-;i8  1.6875      0.02    0 	8.12
-i8  1.75        0.02    0 	8.13
-;i8  1.8125      0.02    0 	8.15
-i8  1.875       0.02    0 	8.13
-;i8  1.9375      0.02    0 	8.12
-
-i8  2           0.05    0 	8.10
-;i8  2.0625      0.05    0 	8.08
-i8  2.125       0.05    0 	8.06
-;i8  2.1875      0.05    0 	8.03
-i8  2.25        0.05    0 	8.01
-;i8  2.3125      0.05    0 	8.10
-i8  2.375       0.05    0 	8.08
-;i8  2.4375      0.05    0 	8.06
-i8  2.5         0.05    0 	8.12
-;i8  2.5625      0.05    0 	8.13
-i8  2.625       0.05    0 	8.10
-;i8  2.6875      0.05    0 	8.12
-i8  2.75        0.05    0 	8.13
-i8  2.8125      0.05    0 	8.15
-i8  2.875       0.05    0 	8.13
-i8  2.9375      0.05    0 	8.12
-
-;i8  3           0.02    0 	8.13
-;i8  3.0625      0.02    0 	8.12
-i8  3.125       0.02    0 	8.10
-i8  3.1875      0.02    0 	8.13
-i8  3.25        0.02    0 	8.12
-;i8  3.3125      0.02    0 	8.10
-i8  3.375       0.02    0 	8.08
-;i8  3.4375      0.02    0 	8.06
-i8  3.5         0.02    0 	8.12
-i8  3.5625      0.02    0 	8.13
-;i8  3.625       0.02    0 	8.10
-;i8  3.6875      0.02    0 	8.12
-i8  3.75        0.02    0 	8.13
-i8  3.8125      0.02    0 	8.15
-;i8  3.875       0.02    0 	8.13
-i8  3.9375      0.02    0 	8.12
-
-i8  4           0.05    0 	8.10
-i8  4.0625      0.05    0 	8.08
-i8  4.125       0.05    0 	8.06
-i8  4.1875      0.05    0 	8.03
-i8  4.25        0.05    0 	8.01
-i8  4.3125      0.05    0 	8.10
-i8  4.375       0.05    0 	8.08
-i8  4.4375      0.05    0 	8.06
-;i8  4.5         0.05    0 	8.12
-;i8  4.5625      0.05    0 	8.13
-i8  4.625       0.05    0 	8.10
-i8  4.6875      0.05    0 	8.12
-;i8  4.75        0.05    0 	8.13
-i8  4.8125      0.05    0 	8.15
-;i8  4.875       0.05    0 	8.13
-i8  4.9375      0.05    0 	8.12
-
-i8  5           0.02    0 	8.13
-i8  5.0625      0.02    0 	8.12
-i8  5.125       0.02    0 	8.10
-i8  5.1875      0.02    0 	8.13
-i8  5.25        0.02    0 	8.12
-i8  5.3125      0.02    0 	8.10
-i8  5.375       0.02    0 	8.08
-i8  5.4375      0.02    0 	8.06
-i8  5.5         0.02    0 	8.12
-i8  5.5625      0.02    0 	8.13
-i8  5.625       0.02    0 	8.10
-i8  5.6875      0.02    0 	8.12
-i8  5.75        0.02    0 	8.13
-i8  5.8125      0.02    0 	8.15
-i8  5.875       0.02    0 	8.13
-i8  5.9375      0.02    0 	8.1
-
-i8  6           0.05    0 	8.10
-i8  6.0625      0.05    0 	8.08
-i8  6.125       0.05    0 	8.06
-i8  6.1875      0.05    0 	8.03
-i8  6.25        0.05    0 	8.01
-i8  6.3125      0.05    0 	8.10
-i8  6.375       0.05    0 	8.08
-i8  6.4375      0.05    0 	8.06
-i8  6.5         0.05    0 	8.12
-i8  6.5625      0.05    0 	8.13
-i8  6.625       0.05    0 	8.10
-i8  6.6875      0.05    0 	8.12
-i8  6.75        0.05    0 	8.13
-i8  6.8125      0.05    0 	8.15
-i8  6.875       0.05    0 	8.13
-i8  6.9375      0.05    0 	8.12
-
-i8  7           0.02    0 	8.13
-i8  7.0625      0.02    0 	8.12
-i8  7.125       0.02    0 	8.10
-i8  7.1875      0.02    0 	8.13
-i8  7.25        0.02    0 	8.12
-i8  7.3125      0.02    0 	8.10
-i8  7.375       0.02    0 	8.08
-i8  7.4375      0.02    0 	8.06
-i8  7.5         0.02    0 	8.12
-i8  7.5625      0.02    0 	8.13
-i8  7.625       0.02    0 	8.10
-i8  7.6875      0.02    0 	8.12
-i8  7.75        0.02    0 	8.13
-i8  7.8125      0.02    0 	8.15
-i8  7.875       0.02    0 	8.13
-i8  7.9375      0.02    0 	8.12
 
 
 

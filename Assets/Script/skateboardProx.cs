@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// Music controller for skateboard.
 public class skateboardProx : MonoBehaviour {
 
 

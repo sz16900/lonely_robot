@@ -24208,7 +24208,6 @@ GameObject:
   - component: {fileID: 1567272365}
   - component: {fileID: 1567272368}
   - component: {fileID: 1567272367}
-  - component: {fileID: 1567272366}
   - component: {fileID: 1567272371}
   m_Layer: 0
   m_Name: wheel
@@ -24238,17 +24237,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1567272366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1567272364}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b50dbb3d9c93664e986e931965a62a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1567272367
 CircleCollider2D:
   m_ObjectHideFlags: 0

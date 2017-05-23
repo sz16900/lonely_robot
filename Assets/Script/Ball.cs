@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
-    private Vector3 pos;                // Ball initial position
+    // Ball initial position
+    private Vector3 pos;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +15,7 @@ public class Ball : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // If the ball gets off the screen
-        if (transform.position.y < -50)
-        {
+        if (transform.position.y < -50) {
             // stop forces affecting the rigidbody
             this.GetComponent<Rigidbody2D>().isKinematic = true;
             // reset position

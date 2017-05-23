@@ -2,28 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Pause menu button.
 public class pauseGame : MonoBehaviour {
     public Transform canvas;
     public Transform mainUICanvas;
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             Pause();
 
         }
 		
 	}
-    public void Pause()
-    {
-        if (canvas.gameObject.activeInHierarchy == false)
-        {
+    public void Pause() {
+        if (canvas.gameObject.activeInHierarchy == false) {
             canvas.gameObject.SetActive(true);
             mainUICanvas.gameObject.SetActive(false);
             Time.timeScale = 0;
         }
-        else
-        {
+        else {
             canvas.gameObject.SetActive(false);
             mainUICanvas.gameObject.SetActive(true);
             Time.timeScale = 1;

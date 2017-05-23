@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FerrisController : MonoBehaviour
-{
+// Controlls the ferris wheel object.
+public class FerrisController : MonoBehaviour {
 
     public float rotationSpeed;
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotationSpeed);
     }
 
-    public void AdjustSpeed(float newSpeed)
-    {
+    public void AdjustSpeed(float newSpeed) {
         rotationSpeed = newSpeed;
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Controls the game timer.
 public class timer : MonoBehaviour {
     public Text timerText;
     private float startTime;
@@ -35,18 +36,15 @@ public class timer : MonoBehaviour {
         timerText.text = minutes + ":" + seconds;
 	}
 
-    public void Finnish()
-    {
+    public void Finnish() {
         finished = true;
         timerText.color = Color.yellow;
     }
 
-    public void saveTimeOnQuit()
-    {
+    public void saveTimeOnQuit() {
         PlayerPrefs.SetFloat("savedTime", Time.time - startTime);
     }
-    public void reloadSavedTime()
-    {
+    public void reloadSavedTime() {
         startTime = Time.time - PlayerPrefs.GetFloat("savedTime");
     }
 }

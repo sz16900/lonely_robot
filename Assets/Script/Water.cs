@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Water phyics script.
 public class Water : MonoBehaviour {
 
     //Our renderer that'll make the top of the water visible

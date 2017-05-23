@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls the floating platform slider.
 public class bridgeController : MonoBehaviour {
 
     public Transform platform;
@@ -13,28 +14,23 @@ public class bridgeController : MonoBehaviour {
     Transform destination;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         SetDestination(startTransform);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         transform.GetComponent<Rigidbody>().MovePosition(platform.position + direction * platformSpeed * Time.fixedDeltaTime);
-        if (Vector3.Distance(platform.position, destination.position) < platformSpeed * Time.fixedDeltaTime)
-        {
+        if (Vector3.Distance(platform.position, destination.position) < platformSpeed * Time.fixedDeltaTime) {
             SetDestination(destination == startTransform ? endTransform : startTransform);
         }
     }
 
-    public void AdjustSpeed(float newSpeed)
-    {
+    public void AdjustSpeed(float newSpeed) {
         platformSpeed = newSpeed;
     }
 
-    void SetDestination(Transform dest)
-    {
+    void SetDestination(Transform dest) {
         destination = dest;
         direction = (destination.position - platform.position).normalized;
     }

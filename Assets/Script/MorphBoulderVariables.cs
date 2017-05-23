@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Contorlls the boulder objects.
 public class MorphBoulderVariables : MonoBehaviour {
 
     // Controls the rotation speed for the boulder
@@ -66,31 +67,25 @@ public class MorphBoulderVariables : MonoBehaviour {
 		objGravity = newObjGravity;
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("DeathTrigger"))
-        {
-            if (gameObject.name == "Boulder1")
-            {
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("DeathTrigger")) {
+            if (gameObject.name == "Boulder1") {
                 Transform boulderTransform = GetComponent<Transform>();
                 transform.position = new Vector2(Boulder1Pos[0], Boulder1Pos[1]);
                 resetParameters();
             }
-            if (gameObject.name == "Boulder2")
-            {
+            if (gameObject.name == "Boulder2") {
                 Transform boulderTransform = GetComponent<Transform>();
                 transform.position = new Vector2(Boulder2Pos[0], Boulder2Pos[1]);
                 resetParameters();
             }
-            if (gameObject.name == "Boulder3")
-            {
+            if (gameObject.name == "Boulder3") {
                 Transform boulderTransform = GetComponent<Transform>();
                 transform.position = new Vector2(Boulder3Pos[0], Boulder3Pos[1]);
                 resetParameters();
 
             }
-            if (gameObject.name == "Boulder4")
-            {
+            if (gameObject.name == "Boulder4") {
                 Transform boulderTransform = GetComponent<Transform>();
                 transform.position = new Vector2(Boulder4Pos[0], Boulder4Pos[1]);
                 resetParameters();
