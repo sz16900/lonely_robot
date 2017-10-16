@@ -4,13 +4,13 @@ to Key Stage 2 students.
 
 When the robot approaches an object, a UI with code pops up. The user can manipilate the values in order to change the 
 attributes of the object:
-![alt text](https://lh3.googleusercontent.com/oMMCWUw19wNcsDYc4Xro2LabBYeAk8EuKYzk0PYnhH1fnurlT7chLebJZmdsykpf-VUB8PLJoic05KQ=w1366-h659)
+![alt text](https://drive.google.com/uc?id=0B-YSrr3goXf5ODh3aWlGb0JBN2c)
 
 Boulder incresed in size:
-![alt text](https://lh4.googleusercontent.com/CCQJLaAxW3940AGYh6bdKMBitkbRFqXwp7tki2WXRTUXH_4ItBVIzrc8ledXrsAOcdkeTxv4J0zy9Hc=w1366-h659)
+![alt text](https://drive.google.com/uc?id=0B-YSrr3goXf5UklYOFY0Ym1hbEk)
 
 Boulder with less gravity:
-![alt text](https://lh6.googleusercontent.com/wbKRiuGMEx_UJBlGTHl_-2SgkZRMq6wN97bkghbFP563MHiBM7dZQBeBcVKaB14b2P4cIDG3ubBpXBI=w1366-h659)
+![alt text](https://drive.google.com/uc?id=0B-YSrr3goXf5T2NyRUNvM09sY3M)
 
 Pause menu:
-![alt text](https://lh3.googleusercontent.com/QodBGwh9Pmnw4_vnqQ2iWV_RoF0vTEZiKbToPCUeUFZh7kfSqLOW6EdoIeF0lXIAcPO2_DUG0bTdm-0=w1366-h659)
+![alt text](https://drive.google.com/uc?id=0B-YSrr3goXf5Sm9PRm9nWjU1aWM)
